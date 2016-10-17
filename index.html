@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <link rel="icon" href="images/logo.ico"/>
+    <link rel="stylesheet" href="css/hddemo.css"/>
+    <script src="js/hdmain.js"></script>
+</head>
+<body>
+<div class="sectionhd" id="section1">
+    <h1 class="hdself">个 人 空 间</h1>
+    <div class="hdcen">
+        <div class="map">
+            <ins class="a-heart"></ins>
+            <img src="images/line1.png" alt="" class="line" id="line"/>
+            <div class="msg" id="box">
+                <p class="a-p">位置：北京</p>
+
+                <p class="a-p">姓名：黄栋</p>
+
+                <p class="a-p">专业：网络工程</p>
+
+                <p class="a-p">婚否：未婚</p>
+
+                <p class="a-p">最想去的地方：</p>
+
+                <p class="a-p" style=" font-size:14px; color:#F00;">很多啦，基本就没去旅游过好吗！</p>
+
+                <p class="a-p">工作：前端开发</p>
+
+                <p class="a-p">关于作品：</p>
+
+                <p class="a-p">练手而已，请多指教~</p>
+
+                <p class="a-p">联系方式：</p>
+
+                <p class="a-p">996497144@qq.com</p>
+
+                <p class="a-p" style=" font-size:16px; color:#F00;">(ps:最好是妹纸！我要妹纸！!)</p>
+            </div>
+        </div>
+        <div class="hdcase" id="hdcasd">
+            <ul>
+                <li>
+                    <img src="images/clock.png">
+                    <a href="html/hdmain.html" target="_blank">JS实现流程图效果</a>
+                </li>
+                <li>
+                    <img src="images/canvas.png">
+                    <a href="javascript:alert('哎呀出错了');">旋转木马</a>
+                </li>
+                <li>
+                    <img src="images/no_img.jpg">
+                    <a href="javascript:alert('暂无demo，敬请期待~');">敬请期待~</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    var box = document.getElementById("box");
+    var line = document.getElementById("line");
+    var casd = document.getElementById("hdcasd");
+    var ul = casd.children[0];
+
+    var timer = null;
+    document.body.onmouseover = function () {
+        animate(line, {"width": 330, "height": 260}, function () {
+            animate(box, {"width": 240, "height": 400, "opacity": 1}, function () {
+                animate(ul, {"opacity": 1})
+            });
+        })
+    };
+</script>
+</body>
+</html>
