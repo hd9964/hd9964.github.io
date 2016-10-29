@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <script>
+    	var add = function (num) {
+    return function (x) {
+        return x + num;
+    }
+}
+var inc = add(10);
+
+var dec = add(-10);
+console.log(inc);
+    </script>
+    </body>
+</html>
