@@ -64,7 +64,7 @@
     var ul = casd.children[0];
 
     var timer = null;
-    document.body.onmouseover = function () {
+    window.onload = function () {
         animate(line, {"width": 330, "height": 260}, function () {
             animate(box, {"width": 240, "height": 400, "opacity": 1}, function () {
                 animate(ul, {"opacity": 1})
