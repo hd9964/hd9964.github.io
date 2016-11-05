@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>券妈妈_唯品会优惠券,京东优惠券,肯德基优惠券</title>
+	<meta name="keywords" content="京东优惠券,唯品会优惠券,聚美优品优惠券,麦当劳优惠券,kfc优惠券,肯德基优惠券,优惠券,1号店优惠券,苏宁易购优惠券" />
+    <meta name="description" content="券妈妈优惠券网 - 中国最大的优惠券网站！唯品会优惠券,京东优惠券,聚美优品优惠券,肯德基优惠券,1号店优惠券,苏宁易购优惠券,一号店优惠券,当当优惠券" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet/less" href="./public/less/main.less">
+	<script src="./public/libs/less.js"></script>
+</head>
+<body ng-app="Qmm">
+	<div class="viewport">
+		<!-- 侧边导航 -->
+		<div ng-class="{navs: true, collapse: collapsed}" ng-controller="NavsController">
+			<dl>
+				<dt class="login">
+					<div class="avatar">
+						<img src="./public/images/avatar.png" alt="">
+					</div>
+					<span>登录</span>
+				</dt>
+				<dd class="active" ng-repeat="nav in navs">
+					<a href="{{nav.link}}" ng-click="toggle()" class="{{nav.icon}}">
+						<span>{{nav.text}}</span>
+					</a>
+				</dd>
+			</dl>
+			<div class="extra">
+				<a href="javascript:;" class="icon-image">夜晚</a>
+				<a href="javascript:;" class="icon-download">离线</a>
+			</div>
+		</div>
+		<div class="container">
+			<!-- 头部 -->
+			<div ng-class="{header: true, collapse: collapsed}">
+				<a href="javascript:;" ng-click="toggle()" class="menu icon-menu"></a>
+				<h2>券妈妈</h2>
+				<a href="javascript:;" class="search icon-search"></a>
+			</div>
+			<!-- 容器 -->
+			<div ng-class="{body: true, collapse: collapsed}">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+	<!-- 引入angularjs -->
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="./bower_components/angular-route/angular-route.js"></script>
+	<script src="./scripts/app.js"></script>
+
+</body>
+</html>
