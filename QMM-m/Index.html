@@ -3,22 +3,15 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="applicable-device" content="mobile" />
     <link href="css/mobile.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/qmm.ico" />
     <title>券妈妈_唯品会优惠券,京东优惠券,肯德基优惠券</title>
     <meta name="keywords" content="京东优惠券,唯品会优惠券,聚美优品优惠券,麦当劳优惠券,kfc优惠券,肯德基优惠券,优惠券,1号店优惠券,苏宁易购优惠券" />
     <meta name="description" content="券妈妈优惠券网 - 中国最大的优惠券网站！唯品会优惠券,京东优惠券,聚美优品优惠券,肯德基优惠券,1号店优惠券,苏宁易购优惠券,一号店优惠券,当当优惠券" />
 </head>
 
 <body>
-    <div style="width: 100%; z-index: 100;">
+    <div>
         <header id="top" class='aj-new-top'>
-            <!--******************************-->
             <a href="#">
                 <img src='picture/qmm_logo.png' class='aj-qmm-banner-bg' />
             </a>
@@ -32,120 +25,12 @@
                     <span class="qmm-icon-iconfont-qita right_menu_btn"></span>
                 </a>
             </div>
-            <!--******************************-->
         </header>
     </div>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript">
-    window.jQuery || document.write("<script src='js/jquery.min-1.10.2.js'>\x3C/script>")
-    </script>
-    <script type="text/javascript" src="js/wap.js"></script>
-    <script type="text/javascript">
-    Youhui.PageType = '';
-
-    Youhui.PageID = '';
-
-
-    Youhui.CookieDomain = '.quanmama.com';
-    </script>
-    <script type="text/javascript">
-    Youhui.common.user.info = {
-        'userid': '',
-        'sina': 0
-    };
-    Youhui = $.extend(Youhui, {
-        SITENAME: "券妈妈",
-        SITEURL: "http://www.quanmama.com/",
-        RESOURCEURL: "",
-        SERVICEURL: "",
-        NOTEFREQUENCY: 60000
-    });
-
-    $(function() {
-
-       
-
-    });
-    </script>
-    <script type="text/javascript">
-    // 显示浮层
-    //      seajs.use("/js/seajs/module/layer/layer.js", function(LY) {
-    //          if (LY) {
-    //              var ly = new LY({
-    //                  width: 350,
-    //                  height: 273,
-    //                  img: "http://www.quanmama.com/html/p2p_v8/licaifanli_fuceng2.jpg",
-    //                  link: "http://www.quanmama.com/huodong/p2pwapv15"
-    //              });
-    //              ly.show();
-    //          }
-    //      });
-    </script>
-    <script type="text/javascript">
-    //app红包浮层
-    var browser = {
-            versions: function() {
-                var u = navigator.userAgent,
-                    app = navigator.appVersion;
-                return { //移动终端浏览器版本信息 
-                    trident: u.indexOf('Trident') > -1, //IE内核
-                    presto: u.indexOf('Presto') > -1, //opera内核
-                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
-                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-                    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
-                    iPad: u.indexOf('iPad') > -1, //是否iPad
-                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
-                };
-            }(),
-            language: (navigator.browserLanguage || navigator.language).toLowerCase()
-        }
-        // 显示浮层
-    seajs.use("/js/seajs/module/layer/layer.js", function(LY) {
-        if (LY) {
-            var ly = new LY({
-                width: 280,
-                height: 443,
-                img: "http://image1.juanlaoda.com/AdminImageUpload/1011414cp-s11-2.png",
-                link: "http://s.click.taobao.com/W6HDcQx"
-            });
-            ly.show();
-        }
-    });
-
-    function is_weixn() {
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger/i) == "micromessenger") {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function isQmmApp() {
-        var explorer = navigator.userAgent;
-        if (explorer.indexOf('APP_USER/quanmama') > -1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function isForbidBrowser() {
-        var s = document.referrer;
-        if (s.indexOf('baidu') > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    </script>
-    <div class="dealout" style="padding-top:50px;" id="body">
-        
+    <div class="dealout" id="body">
         <div id='aj-mobile-wrap'>
-            <div class='aj-index-imgs-roll' style="z-index: 888;">
+            <!-- 轮播 -->
+            <div class='aj-index-imgs-roll' style=" margin-top:50px;z-index: 888;">
                 <a class='aj-link' href='#'>
                     <img src="picture/banner1.png" />
                 </a>
@@ -159,50 +44,60 @@
                     <img src="picture/banner4.jpg" />
                 </a>
             </div>
+            <!-- 八大类导航 -->
             <div id='aj-four-icons-line' class='aj-mobile-module'>
                 <ul class='aj-ul'>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-shutiao'>
-                </span></a>
-                        <p class='aj-p'>
-                            肯德基优惠券</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-shutiao'> </span>
+                        </a>
+                        <p class='aj-p'>肯德基优惠券</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-qiche'>
-                </span></a>
-                        <p class='aj-p'>
-                            打车优惠券</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-qiche'> </span>
+                        </a>
+                        <p class='aj-p'>打车优惠券</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span
-                    class='aj-a-bg qmm-icon-iconfont-xiexiangbao'></span></a>
-                        <p class='aj-p'>
-                            网购优惠券</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-xiexiangbao'></span>
+                        </a>
+                        <p class='aj-p'>网购优惠券</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-shipin'>
-                </span></a>
-                        <p class='aj-p'>
-                            外卖红包</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-shipin'> </span>
+                        </a>
+                        <p class='aj-p'>外卖红包</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-dianyingpiao'>
-                </span></a>
-                        <p class='aj-p'>
-                            电影票红包</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-dianyingpiao'></span>
+                        </a>
+                        <p class='aj-p'>电影票红包</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-tiantianfuli'>
-                </span></a>
-                        <p class='aj-p'>
-                            天天福利</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-tiantianfuli'></span>
+                        </a>
+                        <p class='aj-p'>天天福利</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-jiudian'>
-                </span></a>
-                        <p class='aj-p'>
-                            酒店旅游</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-jiudian'></span>
+                        </a>
+                        <p class='aj-p'>酒店旅游</p>
                     </li>
-                    <li class='aj-li'><a class='aj-a' target="_blank" href="#/"><span class='aj-a-bg qmm-icon-iconfont-qita'>
-                </span></a>
-                        <p class='aj-p'>
-                            类别</p>
+                    <li class='aj-li'>
+                        <a class='aj-a' target="_blank" href="#/">
+                            <span class='aj-a-bg qmm-icon-iconfont-qita'></span>
+                        </a>
+                        <p class='aj-p'>类别</p>
                     </li>
                 </ul>
             </div>
+            <!-- 热门商家 -->
             <div id='aj-top-types'>
                 <div class="aj-one-type aj-mobile-module">
                     <div class="aj-header">
@@ -266,35 +161,29 @@
                     </div>
                 </div>
             </div>
+            <!-- 商品列表 -->
             <div id="aj-shop-index-page">
                 <div class="aj-topnav-line">
                     <div class="aj-topnav-line">
+                        <!-- 商品顶部导航 -->
                         <div class="aj-t-l-wrap">
                             <ul class="aj-ul">
-                                <li class="aj-li j_load aj-select" data-params="category=0;youhuitype=0;page=1;sort=1;AppHomeRankIndex=1;ChannelRankIndex=0;">
-                                    最新</li>
-                                <li class="aj-li j_load" data-params="category=0;youhuitype=0;page=1;sort=2;AppHomeRankIndex=1;ChannelRankIndex=0;">
-                                    最热</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=1257;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    打车</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=3936;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    外卖</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=1186;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    电影票</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=5416;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    理财</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=5441;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    流量话费</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=5417;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    旅游酒店</li>
-                                <li class="aj-li j_load" data-params="youhuitype=0;category=252;page=1;AppHomeRankIndex=0;ChannelRankIndex=1;">
-                                    美妆</li>
+                                <li class="aj-li j_load aj-select"> 最新</li>
+                                <li class="aj-li j_load">最热</li>
+                                <li class="aj-li j_load">打车</li>
+                                <li class="aj-li j_load"> 外卖</li>
+                                <li class="aj-li j_load">电影票</li>
+                                <li class="aj-li j_load">理财</li>
+                                <li class="aj-li j_load">流量话费</li>
+                                <li class="aj-li j_load">旅游酒店</li>
+                                <li class="aj-li j_load">美妆</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="aj-s-mid">
                     <div style="display: block" class="aj-block aj-mid-content">
+                        <!-- 商品列表 -->
                         <div class="aj-ul-wrap-for-bg">
                             <ul class="list list_preferential dealout" id="post_list_preferential">
                                 <li class="zdm_list_li" data-id="1759083">
@@ -302,20 +191,24 @@
                                         <i class=""></i>
                                         <div class="image">
                                             <a target="_blank" href="#/">
-                                                <img alt="红包来了！1-1111元超级红包！手慢无！ 每日可领3次，可叠加，请收藏！！" src="picture/list-tm.png" /></a>
+                                                <img alt="" src="picture/list-tm.png" />
+                                            </a>
                                         </div>
                                     </div>
                                     <address>
-                                        <a href="#">
-                            天猫</a>
+                                        <a href="#">天猫</a>
                                     </address>
                                     <a target="_blank" href="#">
-                                        <h2>
-                            红包来了！1-1111元超级红包！手慢无！</h2>
+                                        <h2>红包来了！1-1111元超级红包！手慢无！</h2>
                                     </a>
                                     <div class="tips">
-                                        <a target="_blank" href="#"><em>
-                            每日可领3次，可叠加，请收藏！！</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">293852</a></span>
+                                        <a target="_blank" href="#">
+                                            <em>每日可领3次，可叠加，请收藏！！</em>
+                                        </a>
+                                        <span>
+                                            <span class="read-num">阅读数:</span>
+                                        <a target="_blank" href="#">293852</a>
+                                        </span>
                                     </div>
                                 </li>
                                 <li class="zdm_list_li" data-id="1718911">
@@ -323,20 +216,18 @@
                                         <i class=""></i>
                                         <div class="image">
                                             <a target="_blank" href="#">
-                                                <img alt="11月4日滴滴最新打车红包 滴滴出行券，每天更新" src="picture/list-dd.jpg" /></a>
+                                                <img alt="" src="picture/list-dd.jpg" />
+                                            </a>
                                         </div>
                                     </div>
                                     <address>
-                                        <a href="#">
-                            滴滴打车</a>
+                                        <a href="#">滴滴打车</a>
                                     </address>
                                     <a target="_blank" href="#">
-                                        <h2>
-                            11月4日滴滴最新打车红包</h2>
+                                        <h2>11月4日滴滴最新打车红包</h2>
                                     </a>
                                     <div class="tips">
-                                        <a target="_blank" href="#"><em>
-                            滴滴出行券，每天更新</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">1323159</a></span>
+                                        <a target="_blank" href="#"><em>滴滴出行券，每天更新</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">1323159</a></span>
                                     </div>
                                 </li>
                                 <li class="zdm_list_li" data-id="1765029">
@@ -348,16 +239,13 @@
                                         </div>
                                     </div>
                                     <address>
-                                        <a href="/mshop/kfc">
-                            肯德基</a>
+                                        <a href="/mshop/kfc">肯德基</a>
                                     </address>
                                     <a target="_blank" href="#">
-                                        <h2>
-                            肯德基11月最新优惠券</h2>
+                                        <h2>肯德基11月最新优惠券</h2>
                                     </a>
                                     <div class="tips">
-                                        <a target="_blank" href="#"><em>
-                            全国通用，出示即可</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">47305</a></span>
+                                        <a target="_blank" href="#"><em>全国通用，出示即可</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">47305</a></span>
                                     </div>
                                 </li>
                                 <li class="zdm_list_li" data-id="1678112">
@@ -369,16 +257,13 @@
                                         </div>
                                     </div>
                                     <address>
-                                        <a href="/mquan_tenpay">
-                            QQ钱包</a>
+                                        <a href="/mquan_tenpay">QQ钱包</a>
                                     </address>
                                     <a target="_blank" href="#">
-                                        <h2>
-                            100%送39张1.8元话费券</h2>
+                                        <h2>100%送39张1.8元话费券</h2>
                                     </a>
                                     <div class="tips">
-                                        <a target="_blank" href="#"><em>
-                            10月31日更新</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">1014066</a></span>
+                                        <a target="_blank" href="#"><em> 10月31日更新</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">1014066</a></span>
                                     </div>
                                 </li>
                                 <li class="zdm_list_li" data-id="1719788">
@@ -386,597 +271,93 @@
                                         <i class=""></i>
                                         <div class="image">
                                             <a target="_blank" href="#">
-                                                <img alt="1000万支付宝红包口令 收藏并分享此帖， 每日更新" src="picture/list-zfb.jpg" /></a>
+                                                <img alt="" src="picture/list-zfb.jpg" />
+                                            </a>
                                         </div>
                                     </div>
                                     <address>
-                                        <a href="#">
-                            支付宝红包</a>
+                                        <a href="#">支付宝红包</a>
                                     </address>
                                     <a target="_blank" href="#">
-                                        <h2>
-                            1000万支付宝红包口令</h2>
+                                        <h2>1000万支付宝红包口令</h2>
                                     </a>
                                     <div class="tips">
-                                        <a target="_blank" href="#"><em>
-                            收藏并分享此帖， 每日更新</em></a><span><span class="read-num">阅读数:</span><a target="_blank" href="#">3517560</a></span>
+                                        <a target="_blank" href="#">
+                                            <em>收藏并分享此帖， 每日更新</em>
+                                        </a>
+                                        <span>
+                                            <span class="read-num">阅读数:</span>
+                                        <a target="_blank" href="#">3517560</a>
+                                        </span>
                                     </div>
                                 </li>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- 加载图 -->
             <div id="aj-delay-page">
                 <img class="img" src="picture/delay.jpg">
             </div>
         </div>
-        <script type="text/javascript">
-        (function(doc, win) {
-            var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function() {
-                    var clientWidth = docEl.clientWidth;
-                    if (!clientWidth) return;
-                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-                };
-            if (!doc.addEventListener) return;
-            win.addEventListener(resizeEvt, recalc, false);
-            doc.addEventListener('DOMContentLoaded', recalc, false);
-        })(document, window);
-        </script>
-        <script type="text/javascript" src="js/hammer.js"></script>
-        <script type="text/javascript" src='js/jquery.slides.min.js'></script>
-        <script type="text/javascript">
-        var Qmm_config = Qmm_config || {};
-        Qmm_config.youhuiInfo = {
-            page: 2, //current_page
-            pagesize: 12,
-            category: 0,
-            sort: 1,
-            site: '',
-            area: 0,
-            time: 0,
-            status: 10000,
-            pagetype: 0,
-            keyword: '',
-            categoryname: '',
-            postname: '默认',
-            match: 0,
-            ajaxUrl: '/myajax/youhuipage', //前端ajax请求地址
-            backItemClassName: 'div.list',
-            youhuitype: 0,
-            PCHomeRankIndex: 0,
-            ChannelRankIndex: 0,
-            AppHomeRankIndex: 1
-        };
-
-        $(function() {
-            $(".tab_home").addClass("current");
-
-            $(".loadMore").click(function() {
-                var $this = $(this);
-                $this.addClass("aj-is-loading");
-                $.get($this.attr("data-url") + "?page=" + $this.attr("data-page"), function(response) {
-
-                    $this.removeClass("aj-is-loading");
-                    $this.attr("data-page", parseInt($this.attr("data-page")) + 1);
-                    $("#post_list_preferential").append(response);
-
-                    Youhui.delayLoader.init({
-                        elements: "#post_list_preferential img"
-                    });
-                });
-            });
-        });
-        </script>
-        <script>
-        $(function() {
-            var mobile_wrap = $('#aj-mobile-wrap');
-            // 顶部两行八个icons 滚动
-            (function() {
-                function IconLine(div) {
-                    var uls;
-                    this.div = $(div);
-                    this.randColor();
-                    uls = this.div.find('.aj-ul');
-                    if (uls.length > 1) {
-                        this.swipe();
-                    } else {
-                        uls.show();
-                    }
-                }
-                IconLine.prototype = {
-                    randColor: function() {
-                        var colors = [
-                            '#ffb700', '#ff68b9', '#56b2ff', '#ff67b9',
-                            '#a8dd99', '#f61d4b', '#31bd80', '#3ea3ff',
-                            '#ff7d00', '#ffb30f', '#e4000f'
-                        ];
-                        var spans = this.div.find('.aj-a-bg');
-                        spans.each(function(index, obj) {
-                            $(this).css('backgroundColor', colors[index % (colors.length - 1)]);
-                            $(this).css('box-shadow', colors[index % (colors.length - 1)] + ' 0 0 2px');
-                        });
-                    },
-                    swipe: function() {
-                        var $this = this;
-                        $(function() {
-                            $this.div.slidesjs({
-                                navigation: {
-                                    active: true,
-                                    effect: "fade"
-                                },
-                                pagination: {
-                                    active: true,
-                                    effect: "fade"
-                                },
-                                effect: {
-                                    fade: {
-                                        speed: 400
-                                    }
-                                }
-                            });
-                        });
-                        this.div.find('.aj-ul').show();
-                    }
-                };
-                var div = $('#aj-four-icons-line'),
-                    icl = new IconLine(div);
-            })();
-            // 水平滚动 一行四个
-            (function() {
-                $('#aj-top-types').find('.aj-one-type .aj-content-inside-roll').each(function() {
-                    var uls = $(this).find('.aj-ul');
-                    if (uls.length > 1) {
-                        $(this).slidesjs({
-                            navigation: {
-                                effect: "fade"
-                            },
-                            pagination: {
-                                active: true,
-                                effect: "fade"
-                            },
-                            effect: {
-                                fade: {
-                                    speed: 400
-                                }
-                            }
-                        });
-                    } else {
-                        uls.show();
-                    }
-                });
-            })();
-            // border color and block inside "more" color
-            (function() {
-                var good_colors = [
-                    '#ffb700', '#56b2ff', '#ff67b9',
-                    '#a8dd99', '#f61d4b', '#31bd80', '#3ea3ff',
-                    '#ff7d00', '#e4000f', '#ff68b9'
-                ];
-                // index page module 10px border color
-
-                mobile_wrap.find('.aj-one-type .aj-color-border').each(function(index) {
-                    var color = good_colors[index % (good_colors.length - 1)];
-                    $(this).css('backgroundColor', color);
-                    $(this).parents('.aj-header').find('.aj-more').css('color', color);
-                });
-            })();
-            // index page top imgs roll
-            (function() {
-                mobile_wrap.find('.aj-index-imgs-roll').each(function() {
-                    var links = $(this).find('.aj-link');
-                    if (links.length > 1) {
-                        $(this).slidesjs({
-                            navigation: {
-                                active: false,
-                                effect: "fade"
-                            },
-                            pagination: {
-                                active: true,
-                                effect: "fade"
-                            },
-                            effect: {
-                                fade: {
-                                    speed: 400
-                                }
-                            },
-                            play: {
-                                active: true,
-                                effect: "slide",
-                                interval: 3000,
-                                auto: true,
-                                swap: false,
-                                pauseOnHover: true,
-                                restartDelay: 2500
-                            }
-                        });
-                    } else {
-                        links.show();
-                    }
-                });
-            })();
-            // mid two modules toggle
-            (function() {
-                var div = $('#aj-two-toggle');
-                div.find('.aj-t-t-lar').click(function() {
-                    $(this).addClass('aj-select').siblings().removeClass('aj-select');
-                    div.find('.aj-m-c-one').hide().eq($(this).index()).show();
-                });
-                div.find('.aj-mid-content .loadMore').click(function() {
-                    $(this).addClass('aj-is-loading');
-                });
-            })();
-            //imgs rol resize
-            (function() {
-                var imgsRoll = mobile_wrap.find('.aj-index-imgs-roll');
-                resize();
-
-                function resize() {
-                    // 图片的width : height = 2.6
-                    var height = parseFloat(imgsRoll.css('width')) / 2.6;
-                    imgsRoll.css('height', height + 'px');
-                }
-                $(window).on('resize', function() {
-                    resize();
-                });
-            })();
-        });
-        </script>
-        <script type="text/javascript">
-        $(function() {
-            $('#aj-mobile-wrap .aj-t-l-wrap .aj-li').click(function() {
-                $('#aj-mobile-wrap .aj-t-l-wrap .aj-li').removeClass('aj-select');
-                $(this).addClass('aj-select');
-            });
-        });
-
-        $(function() {
-            function Touch(wrap, obj, opt) { // 在dom 内水平滑动 obj
-                this.wrap = wrap;
-                this.obj = obj;
-                this.opt = opt;
-                this.v = {};
-                this.init();
-            }
-            Touch.prototype = {
-                init: function() {
-                    this.v.wrapWidth = $(this.wrap).width();
-                    this.v.className = 'aj-li';
-                    this.v.click = true;
-                    this.v.margin = 15;
-                    this.v.objWidth = this.initObjTotalWidth();
-                    $.extend(this.v, this.opt);
-                    // event
-                    this.touch();
-                    this.v.click && this.clickStyle();
-                    this.fixPositon();
-                    $(this.obj).trigger('aj.fix_position');
-                },
-                initObjTotalWidth: function() {
-                    var total = 0;
-                    this.obj.find('.' + this.v.className).each(function() {
-                        total += $(this).width() +
-                            parseInt($(this).css('marginLeft'), 10) +
-                            parseInt($(this).css('marginRight'), 10)
-                    });
-                    this.obj.css('width', total + 'px');
-                    return total;
-                },
-                touch: function() {
-                    var $this = this,
-                        min = this.v.wrapWidth - this.v.objWidth,
-                        max = 0,
-                        jiluDeltaX = 0,
-                        left;
-                    this.v.left = parseInt($(this.obj).css('left'), 10);
-                    min = min <= 0 ? min : 0;
-                    this.ham = new Hammer(this.obj[0]);
-                    this.ham.on('pan', function(ev) {
-                        left = $this.v.left;
-                        if ($this.isDeltaXOK(left + ev.deltaX, min, max)) {
-                            $this.obj.css('left', left + ev.deltaX + 'px');
-                            jiluDeltaX = ev.deltaX;
-                        }
-                        if (ev.isFinal) {
-                            left += jiluDeltaX;
-                            $this.v.left = left;
-                            jiluDeltaX = 0;
-                        }
-                    });
-                },
-                isDeltaXOK: function(d, min, max) {
-                    if (d >= min && d <= max) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                },
-                clickStyle: function() {
-                    var $this = this;
-                    this.obj.on('click', '.' + this.v.className, function() {
-                        $(this).addClass('aj-select').siblings().removeClass('aj-select');
-                        $($this.obj).trigger('aj.fix_position');
-                    });
-                },
-                fixPositon: function() { // 修改obj中的选项的位置,如果被遮住的话
-                    var $this = this;
-                    $(this.obj).on('aj.fix_position', function() {
-                        var select = $this.obj.find('.' + $this.v.className + '.aj-select');
-                        var zhezhu = $this.isZhezhu(select);
-                        if (zhezhu !== false) {
-                            $this.v.left += zhezhu;
-                            $($this.obj).animate({
-                                left: $this.v.left + 'px'
-                            });
-                        }
-                    });
-                },
-                isZhezhu: function(li) {
-                    if ($(li).offset().left < 0)
-                        return -($(li).offset().left + this.v.margin);
-                    if ($(li).offset().left + $(li).width() - $(window).width() > 0)
-                        return -($(li).offset().left + $(li).width() + this.v.margin - $(window).width());
-                    return false;
-                }
-            };
-            var div = $('#aj-mobile-wrap .aj-topnav-line'),
-                ul = div.find('.aj-ul');
-            var tt = new Touch(div, ul, {});
-            window.tt = tt;
-        });
-        </script>
     </div>
     <!--  右侧边栏  -->
-    <div id="sidr" style="display: none; position: fixed; z-index: 99999; top: 84px;
-    right: 0px; border: 1px solid #898989; background: none repeat scroll 0 0 #fff;">
+    <div id="sidr">
         <div class=" goes_login" id="loginN">
             <dl>
                 <dd>
-                    券妈妈登陆：</dd>
+                    券妈妈登陆：
+                </dd>
                 <dt>
                     <a href="#">
-                        <img title="用QQ账号登录" alt="用QQ账号登录" src="picture/tencent_logo_big.png" /></a>
+                        <img title="用QQ账号登录" alt=" " src="picture/tencent_logo_big.png" /></a>
                 </dt>
                 <dt>
-                    <a href=#">
-                        <img title="用新浪微博账号登录" alt="用新浪微博账号登录" src="picture/sina_logo_big.gif" class="sina_login_image" /></a>
+                    <a href=# ">
+                        <img title="用新浪微博账号登录 " alt=" " src="picture/sina_logo_big.gif " class="sina_login_image " /></a>
                 </dt>
             </dl>
         </div>
-        <ul class="list_block">
-            <li><a href="#">我收藏的肯麦券</a></li>
-            <li><a href="#">搜索优惠券</a></li>
-            <li><a href="javascript:;">刷新</a></li>
-            <li><a href="#">联系我们</a></li>
-            <li><a href="#">关于券妈妈</a></li>
+        <ul class="list_block ">
+            <li><a href="# ">我收藏的肯麦券</a></li>
+            <li><a href="# ">搜索优惠券</a></li>
+            <li><a href="javascript:; ">刷新</a></li>
+            <li><a href="# ">联系我们</a></li>
+            <li><a href="# ">关于券妈妈</a></li>
         </ul>
     </div>
-    <script type="text/javascript">
-    $(".right_menu_btn").click(function(e) {
-        if (!$("#sidr").is(":visible")) {
-            $("#sidr").show();
-        } else {
-            $("#sidr").hide();
-        }
-
-        e.stopPropagation();
-    });
-
-    $(document).click(function() {
-        $("#sidr").hide();
-    });
-
-    $("#sidr").click(function(e) {
-        e.stopPropagation();
-    });
-
-    //图片延时加载
-    if (Youhui) {
-        Youhui.delayLoader.init();
-    }
-
-    if (Youhui.tools.cookie("webapp") == "1") {
-        $(".JNavTabs").hide();
-        $(".tab_home").hide();
-        $(".tab_yhq").hide();
-        $(".tab_zdm").hide();
-        $(".tab_jiukuaijiu").hide();
-        $(".tab_kendeji").hide();
-    }
-    </script>
-    <div style="text-align: left; clear: both;" id="footer">
-        <div style="clear: both">
+    <!-- 底部 -->
+    <div style="text-align: left; clear: both; " id="footer ">
+        <div style="clear: both ">
         </div>
-        <div style="background-color: #0fd5a4; color: #FFFFFF; padding: 5px 2px; text-align: center;">
-            <a href="#" class="navfooter"><span class="footerspan">首页</span></a>
-            <font color="#FFFFFF">|</font>
-            <a href="#"><span class="footerspan">登陆</span></a>
-            <font color="#FFFFFF">|</font><a href="/myfav" class="navfooter"><span class="footerspan">
+        <div style="background-color: #0fd5a4; color: #FFFFFF; padding: 5px 2px; text-align: center; ">
+            <a href="# " class="navfooter "><span class="footerspan ">首页</span></a>
+            <font color="#FFFFFF ">|</font>
+            <a href="# "><span class="footerspan ">登陆</span></a>
+            <font color="#FFFFFF ">|</font><a href="/myfav " class="navfooter "><span class="footerspan ">
             收藏的券</span></a>
-            <font color="#FFFFFF">|</font>
-            <a href="#" class="navfooter">
-                <span class="footerspan">帮助</span></a>
-            <font color="#FFFFFF">|</font><a href="/mobile/about" class="navfooter"><span class="footerspan">关于</span></a>
+            <font color="#FFFFFF ">|</font>
+            <a href="# " class="navfooter ">
+                <span class="footerspan ">帮助</span></a>
+            <font color="#FFFFFF ">|</font><a href="/mobile/about " class="navfooter "><span class="footerspan ">关于</span></a>
         </div>
-        <div class='version' style="margin-left: 5px; display: none; text-align: center;
-        line-height: 30px;">
-            <a rel="nofollow" href="#"><span class="footerspan2 appdown">app客户端<img
-            alt="" height="16px" style="padding-top: 5px; padding-bottom: 5px;" src="picture/apptj.png" /></span></a>|<a href="#"><span class="footerspan2">电脑版</span></a>
+        <div class='version' style="margin-left: 5px; display: none; text-align: center; line-height: 30px; ">
+            <a rel="nofollow " href="# "><span class="footerspan2 appdown ">app客户端<img
+            alt=" " height="16px " style="padding-top: 5px; padding-bottom: 5px; " src="picture/apptj.png " /></span></a>|<a href="# "><span class="footerspan2 ">电脑版</span></a>
         </div>
-        <div style="text-align: left; padding-left: 4px; text-align: center; line-height: 25px;
-        color: #666; padding-bottom: 20px;">
+        <div style="text-align: left; padding-left: 4px; text-align: center; line-height: 25px; color: #666; padding-bottom: 20px; ">
             <p>
                 券妈妈&copy;2011-2016
                 <br />
             </p>
-            <p id="qmmtotalusercount">
+            <p id="qmmtotalusercount ">
                 券妈妈-中国最大网购优惠券网，已有<b>9897695</b>个用户</p>
         </div>
     </div>
-    <div class="gj-go-top" style="display: none;" onclick="javascript:$(document).scrollTop(0);return false;">
-        <i class="qmm-icon-circle-up"></i>
-    </div>
-    <div class="pop" id="pop" style="position: fixed; left: 0px; top: 0px; z-index: 9999;
-    width: 100%; background: #333; height: 50px;">
-        <div class="pop-main">
-            <div class="mt-downclient">
-                <div class="mt-downclient-title">
-                    <p class="pt1">
-                        券妈妈APP</p>
-                    <p class="pt2">
-                        超千万用户在这领券</p>
-                </div>
-                <img alt="券妈妈app" src="picture/logo.png" class="mt-downclient-img"><a class="btn btn-weak mt-downclient-btn mj-down" id='download_btn' href="#">立刻打开</a></div>
-        </div>
-        <em class="pop-close">＋</em>
-    </div>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-
-        var slider = $("#slider");
-        if (slider.length > 0 && $.isFunction(slider.owlCarousel)) {
-            slider.owlCarousel({
-                singleItem: true,
-                autoPlay: true
-
-            });
-        }
-    });
-
-    var goTopObj = $(".gj-go-top");
-    $(window).bind("scroll.gotop", function() {
-        $("#sidr").hide();
-
-        if ($(window).scrollTop() > 30) {
-            goTopObj.fadeIn('fast').css("display", "block");
-        } else {
-            goTopObj.fadeOut('fast');
-        }
-    });
-
-    var ostype = 'android';
-    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-        ostype = 'ios';
-    };
-
-    var obody = $('#body');
-    var bannerTop;
-    bannerTop = $('#top').height() + $('#body a img:first').height();
-
-    function isWeixinBrowser() {
-        var ua = navigator.userAgent.toLowerCase();
-        return (/micromessenger/.test(ua)) ? true : false;
-    }
-
-    function getParam(name) {
-        return location.href.match(new RegExp('[?#&]' + name + '=([^?#&]+)', 'i')) ? RegExp.$1 : '';
-    }
-
-    if (getParam('qmmapp').length > 0) {
-        Youhui.tools.cookie("qmm_app", "1", {
-            path: '/',
-            domain: Youhui.CookieDomain,
-            expires: 864000
-        });
-    }
-    //    && ostype == 'android'
-    if (Youhui.tools.cookie("appclose") != "1" && window.location.href.indexOf("/mobile/download") < 0 && unescape(Youhui.tools.cookie('qmm_app')).length == 0) {
-        $("#pop").show();
-        $(".aj-new-top").css('top', '50px');
-    } else {
-        $(".aj-new-top").css('top', '0px');
-        obody.css('padding-top', '0px');
-        goTopObj.css('bottom', '8px');
-    }
-
-    var explorer = navigator.userAgent;
-    if (explorer.indexOf('APP_USER/quanmama') > -1) {
-        $("#pop").hide();
-        $(".aj-new-top").css('top', '0px');
-        obody.css('padding-top', '0px');
-        goTopObj.css('bottom', '8px');
-        $('#aj-all-types .aj-left-side').css({
-            top: bannerTop + 'px'
-        });
-        $('#aj-all-types .aj-right-side').css({
-            top: bannerTop + 'px'
-        });
-    };
-
-    $(".pop-close").click(function() {
-        $("#pop").hide();
-        $(".aj-new-top").css('top', '0px');
-        obody.css('padding-top', '0px');
-        goTopObj.css('bottom', '8px');
-        $('#aj-all-types .aj-left-side').css({
-            top: bannerTop + 'px'
-        });
-        $('#aj-all-types .aj-right-side').css({
-            top: bannerTop + 'px'
-        });
-
-        Youhui.tools.cookie("appclose", "1", {
-            path: '/',
-            domain: Youhui.CookieDomain,
-            expires: 864000
-        });
-    });
-
-    //手机app的访问
-    if (window.location.href.indexOf("utm_source=ios") > 0 || window.location.href.indexOf("utm_source=android") > 0 || window.location.href.indexOf("from=ios") > 0 || window.location.href.indexOf("from=android") > 0) {
-        Youhui.tools.cookie("appvisit", "1", {
-            path: '/',
-            domain: Youhui.CookieDomain,
-            expires: 864000
-        });
-    }
-
-    if (Youhui.tools.cookie("appvisit") == "1") {
-        $("#pop").hide();
-    } else {
-        $(".version").show();
-    }
-
-    Youhui.tools.cookie("pc", "0", {
-        path: '/',
-        domain: Youhui.CookieDomain,
-        expires: 864000
-    });
-    </script>
-    <div id="userweibo" style="display: none;">
-        <a href="#">
-            <img title="用QQ账号登录" alt="用QQ账号登录" src="picture/tencent_logo_big.png" /></a>
-        <br />
-        <a href="#">
-            <img title="用新浪微博账号登录" alt="用新浪微博账号登录" src="picture/sina_logo_big.gif" class="sina_login_image" /></a>
-    </div>
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-22799670-1']);
-    _gaq.push(['_setDomainName', '.quanmama.com'])
-
-    _gaq.push(['_addOrganic', 'baidu', 'word']);
-    _gaq.push(['_addOrganic', 'soso', 'w']);
-    _gaq.push(['_addOrganic', '3721', 'name']);
-    _gaq.push(['_addOrganic', 'youdao', 'q']);
-    _gaq.push(['_addOrganic', 'so.360.cn', 'q']);
-    _gaq.push(['_addOrganic', 'so.com', 'q']);
-    _gaq.push(['_addOrganic', 'vnet', 'kw']);
-    _gaq.push(['_addOrganic', 'sogou', 'query']);
-
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+    <!-- 返回按钮 -->
+    <div class="gj-go-top " >
+        <i class="qmm-icon-circle-up "></i>
+    </div>    
 </body>
 
 </html>
