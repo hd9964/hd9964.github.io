@@ -8,7 +8,9 @@
     <meta name="keywords" content="京东优惠券,唯品会优惠券,聚美优品优惠券,麦当劳优惠券,kfc优惠券,肯德基优惠券,优惠券,1号店优惠券,苏宁易购优惠券" />
     <meta name="description" content="券妈妈优惠券网 - 中国最大的优惠券网站！唯品会优惠券,京东优惠券,聚美优品优惠券,肯德基优惠券,1号店优惠券,苏宁易购优惠券,一号店优惠券,当当优惠券" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
-   
+   <style>
+       
+   </style>
 </head>
 
 <body>
@@ -217,6 +219,10 @@
                 </ul>
             </div>
         </div>
+         <div class="back">
+        
+        </div>
+       
     </div>
     <!-- footer -->
     <div class="footer">
@@ -254,13 +260,49 @@
             <p>券妈妈-中国最大网购优惠券网，已有<b>9897695</b>个用户</p>
         </div>
     </div>
+    <!-- siderbar -->
+        <div class="sidbar">
+           <div class=" goes_login" id="loginN">
+                <dl>
+                    <dd>券妈妈登陆：</dd>
+                    <dt><a href=""><img src="./picture/tencent_logo_big.png"/></a></dt>
+                    <dt><a href=""><img src="./picture/sina_logo_big.gif"/></a></dt>
+                </dl> 
+            </div>
+            <ul class="list_block">
+                <li><a href="#">我收藏的肯麦券</a></li>
+                <li><a href="#">搜索优惠券</a></li>
+                <li><a href="#">刷新</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">关于券妈妈</a></li>  
+            </ul>
+        </div>
     <script src='./js/swipe.js'></script>
     <script>
+    var back = document.querySelector('.back');
+    window.onscroll = function () {
+        var scrl = scroll();
+        if (scrl.top > 0) {
+           back.style.display="block";
+        } else {
+            back.style.display="none";
+        }
+    };
+
+    back.onclick=function(){
+         window.scrollTo(0, 0);
+    }
     var slide = document.querySelector('.swipe');
     Swipe(slide, {
         auto: 3000,
         speed: 400
     });
+     function scroll() {
+        return {
+            top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+            left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+        };
+    }
     </script>
     <script src='./js/jquery.min.js'></script>
 </body>
