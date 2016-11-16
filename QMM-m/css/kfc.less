@@ -40,7 +40,7 @@ ul,
 dl,
 ol,
 p,
-h1 {
+h1 ,h2,h3,h4,h5{
     margin: 0;
     padding: 0;
 }
@@ -117,6 +117,43 @@ a {
             }
         }
     }
+}
+.content{
+	margin-top: 5px;
+	width: 100%;
+	h3{
+		width: 100%;
+		height: 20px;
+		font-size: 14px;
+		font-weight: 400;
+		background-color: #ecffe4;
+		line-height: 20px;
+		text-align: center;
+		margin-bottom: 2px;
+	}
+	li{
+		width: auto;
+		display: flex;
+		margin: 5px;
+
+		a{
+		display: block;
+		border: 1px solid #dfdfdf;
+		margin: 0 5px 0 5px;
+		padding-top: 5px;
+		float: left;
+		flex:1;
+		height: 75px;
+		text-align: center;
+		img{
+			width: 50px;
+			height: 50px;
+			border-radius: 10px;
+		}
+	}
+	}
+
+	
 }
 
 .footer {
