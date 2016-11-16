@@ -31,8 +31,4 @@
     })
 
 
-    var slide = document.querySelector('.swipe');
-    Swipe(slide, {
-        auto: 3000,
-        speed: 400
-    });
+    
