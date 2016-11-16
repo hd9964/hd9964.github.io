@@ -1,0 +1,195 @@
+@import 'normalize.less';
+@font-face {
+    font-family: "iconfont";
+    src: url('../font/iconfont.eot');
+    /* IE9*/
+    src: url('../font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE16 */
+    url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.1px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px 0;
+    color: #333;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", "微软雅黑", Tahoma, Helvetica;
+    color: #333;
+}
+
+body,
+ul,
+dl,
+ol,
+p,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #849184;
+}
+
+a {
+    img {
+        border: 0;
+    }
+}
+
+.top {
+    width: 100%;
+    height: 50px;
+    header {
+        width: 100%;
+        height: 50px;
+        background-color: #0FD5A4;
+        text-align: center;
+        .gohome {
+            // display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            
+            float: left;
+            span {
+                // height: 50px;
+                line-height: 50px;
+                font-size: 24px;
+                color: white;
+            }
+        }
+        h1 {
+            font: 700 20px/50px Arial;
+            text-shadow: 0 1px 1px #00BBBB;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            color:white;
+        }
+        .top_btn {
+            float: right;
+            .search {
+            	display: inline-block;
+            	width: 30px;
+                height: 50px;
+                line-height: 50px;
+                span {
+                    color: white;
+                    font-size: 24px;
+                    height: 50px;
+                    line-height: 50px;
+                }
+            }
+            .login {
+            	display: inline-block;
+            	width: 40px;
+                height: 50px;
+                
+                span {
+                    color: white;
+                    height: 50px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    clear: both;
+    font-size: 14px;
+    .navfooter {
+        background-color: #0fd5a4;
+        color: #FFFFFF;
+        text-align: center;
+        a {
+            display: inline-block;
+            color: #FFFFFF;
+            font-size: 14px;
+            padding: 5px 2px;
+        }
+    }
+    .version {
+        margin-left: 5px;
+        text-align: center;
+        line-height: 30px;
+        a {
+            color: #00A3CE;
+            margin: 0 10px;
+        }
+        .appdown {
+            img {
+                height: 16px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .copy {
+        text-align: left;
+        padding-left: 4px;
+        text-align: center;
+        line-height: 25px;
+        color: #666;
+        padding-bottom: 20px;
+    }
+}
+
+.sidbar {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    border: 1px solid #898989;
+    background: none repeat scroll 0 0 #fff;
+    text-align: center;
+    .goes_login {
+        padding: 10px 20px;
+        dl {
+            text-align: center;
+            padding-bottom: 5px;
+            dd {
+                margin-left: 0px;
+                padding-bottom: 5px;
+            }
+            dt {}
+        }
+    }
+    .list_block {
+        li {
+            border-top: 1px dotted;
+            color: #849184;
+            text-align: left;
+            a {
+                display: block;
+                padding: 8px;
+            }
+        }
+    }
+}

@@ -22,6 +22,7 @@
 }
 
 body {
+    font-size: 14px;
     font-family: "Microsoft YaHei", "微软雅黑", Tahoma, Helvetica;
     color: #333;
 }
@@ -41,6 +42,13 @@ li {
 
 a {
     text-decoration: none;
+    color: #849184;
+}
+
+a {
+    img {
+        border: 0;
+    }
 }
 
 .icon {
@@ -64,6 +72,7 @@ a {
 
 .icon2,
 .icon4 {
+
     background-color: #FF68B9;
 }
 
@@ -73,14 +82,18 @@ a {
 }
 
 .icon5 {
+
+  
     background-color: #A8DD99;
 }
 
 .icon6 {
     background-color: #F61D4B;
+
 }
 
 .icon7 {
+
     background-color: #31BD80;
 }
 
@@ -174,11 +187,13 @@ a {
                         width: 40px;
                         height: 40px;
                         color: white;
+                        box-sizing: border-box;
                         font-size: 30px;
                         border-radius: 50%;
                         display: inline-block;
                         text-align: center;
                         line-height: 40px;
+
                     }
                 }
                 p {
@@ -265,49 +280,45 @@ a {
         .shoplist {
             ul {
                 .list {
-                    
                     padding: 5px;
                     border-top: 1px solid #eee;
                     border-bottom: 1px solid #eee;
-                    position:relative;
+                    position: relative;
                     .list-l {
-                        width:25%;
+                        width: 25%;
                         min-height: 95px;
-                
                         a {
                             width: 100%;
                             display: inline-block;
                             // // width: 77px;
                             // height: 77px;
                             img {
-                                max-width:100%;
+                                max-width: 100%;
                             }
                         }
                     }
                     .list-r {
-                        width:65%;
+                        width: 65%;
                         font-size: 0.9em;
                         overflow: hidden;
                         position: absolute;
-                        left:30%;
-                        top:5px;
-                        
+                        left: 30%;
+                        top: 5px;
                         .title {
                             display: block;
-                             font-size: 0.8em;
-                             color:#3e474e;
+                            font-size: 0.8em;
+                            color: #3e474e;
                         }
                         .tip {
                             display: block;
                             font-size: 14px;
                             color: #3e474e;
-                            margin-top:10px;
+                            margin-top: 10px;
                             height: 18px;
                         }
                         .bot {
                             height: 18px;
-                            margin-top:24px;
-                            
+                            margin-top: 24px;
                             .red-tips {
                                 float: left;
                                 color: red;
@@ -316,14 +327,12 @@ a {
                                 overflow: hidden;
                             }
                             .read-num {
-
                                 margin-right: 10px;
                                 font-size: 12px;
                                 float: right;
-                                a{
-                                    color:#3e474e;
+                                a {
+                                    color: #3e474e;
                                 }
-                                
                             }
                         }
                     }
@@ -331,16 +340,22 @@ a {
             }
         }
     }
-    .back{
-        width: 50px;
-        height: 50px;
-        background-color: #eee;
-        position: fixed;
-        top: 80%;
-        right: 10%;
+    .back {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        bottom: 83px;
         display: none;
+        position: fixed;
+        right: 14px;
+        text-align: center;
+        i{
+            padding:  5px 7px;
+            color:white;
+            font-size: 20px;
+            display: block;
+           
+        }
     }
-   
 }
 
 .footer {
@@ -369,26 +384,51 @@ a {
         }
         .appdown {
             img {
-                height:16px;
+                height: 16px;
                 padding-top: 5px;
                 padding-bottom: 5px;
             }
         }
     }
-    .copy{
+    .copy {
         text-align: left;
-         padding-left: 4px; 
-         text-align: center; 
-         line-height: 25px; 
-         color: #666; 
-        padding-bottom: 20px; 
+        padding-left: 4px;
+        text-align: center;
+        line-height: 25px;
+        color: #666;
+        padding-bottom: 20px;
     }
 }
- .sidbar{
-        // display: none; 
-        position: fixed;
-        top: 50px;
-        right: 0px; 
-        border: 1px solid #898989;
-        background: none repeat scroll 0 0 #fff;
+
+.sidbar {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    border: 1px solid #898989;
+    background: none repeat scroll 0 0 #fff;
+    text-align: center;
+    .goes_login {
+        padding: 10px 20px;
+        dl {
+            text-align: center;
+            padding-bottom: 5px;
+            dd {
+                margin-left: 0px;
+                padding-bottom: 5px;
+            }
+            dt {}
+        }
     }
+    .list_block {
+        li {
+            border-top: 1px dotted;
+            color: #849184;
+            text-align: left;
+            a {
+                display: block;
+                padding: 8px;
+            }
+        }
+    }
+}
