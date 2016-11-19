@@ -1,6 +1,6 @@
 body,
 ul,
-li {
+li,p{
     margin: 0;
     padding: 0;
     font-family: 微软雅黑;
@@ -134,9 +134,13 @@ li {
     padding-top: 10%;
     text-align: center;
 }
-
+.intro-icon #myPhoto{
+    width: 150px;
+   vertical-align: middle;
+    border-radius: 50%;
+}
 .intro-text {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .intro-text-l li {
@@ -333,7 +337,7 @@ li {
 }
 
 #block-prjEXP #prj-helpmechoose .prj-logo {
-    background: #ED6461 url(../images/helpmechoose.png) no-repeat center;
+    background: #ED6461  no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
@@ -342,12 +346,12 @@ li {
 }
 
 #block-prjEXP #prj-navFixed .prj-logo {
-    background: #9C58B6 url(../images/navfixed.png) no-repeat center;
+    background: #9C58B6  no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
 #block-prjEXP #prj-integralSystem .prj-logo {
-    background: #16CC70 url(../images/integralsystem.png) no-repeat center;
+    background: #16CC70  no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
