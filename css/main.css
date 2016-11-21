@@ -1,6 +1,9 @@
 body,
 ul,
-li,p{
+li,
+p,
+h1,
+h2 {
     margin: 0;
     padding: 0;
     font-family: 微软雅黑;
@@ -40,6 +43,8 @@ li {
 }
 
 .header a {
+    display: inline-block;
+    height: 52px;
     padding: 0 25px;
     font-size: 14px;
     line-height: 52px;
@@ -48,7 +53,8 @@ li {
 }
 
 .header a:hover {
-    color: #999;
+    // color: #999;
+    background-color: #222728;
 }
 
 
@@ -56,8 +62,16 @@ li {
 
 .section:first-child {
     background-color: #16BA9D;
+    position: relative;
 }
-
+.section:first-child img{
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    opacity: 0;
+    margin-left: -20px
+}
 .section:first-child .text {
     width: 100%;
     text-align: center;
@@ -134,11 +148,13 @@ li {
     padding-top: 10%;
     text-align: center;
 }
-.intro-icon #myPhoto{
+
+.intro-icon #myPhoto {
     width: 150px;
-   vertical-align: middle;
+    vertical-align: middle;
     border-radius: 50%;
 }
+
 .intro-text {
     margin-top: 5%;
 }
@@ -189,11 +205,13 @@ li {
     font-family: "Microsoft YaHei light";
     text-align: center;
     vertical-align: top;
+    overflow: hidden;
 }
 
 #block-skill li {
     height: 50px;
     line-height: 50px;
+  
 }
 
 #block-skill li:first-child {
@@ -205,7 +223,10 @@ li {
     background-color: #FFFFFF;
     color: #333;
     cursor: default;
+    transform:scale(1.2)
 }
+
+
 
 
 /*第四屏*/
@@ -307,10 +328,9 @@ li {
 #block-prjEXP .prj {
     float: left;
     height: auto;
-   margin: 0 auto;
+    margin: 0 auto;
     text-align: center;
     flex: 1;
-    
 }
 
 #block-prjEXP .prj .prj-logo {
@@ -337,7 +357,7 @@ li {
 }
 
 #block-prjEXP #prj-helpmechoose .prj-logo {
-    background: #ED6461  no-repeat center;
+    background: #ED6461 no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
@@ -346,13 +366,32 @@ li {
 }
 
 #block-prjEXP #prj-navFixed .prj-logo {
-    background: #9C58B6  no-repeat center;
+    background: #9C58B6 no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
 #block-prjEXP #prj-integralSystem .prj-logo {
-    background: #16CC70  no-repeat center;
+    background: #16CC70 no-repeat center;
     border: 4px solid #FFFFFF;
+}
+
+#block-Email {
+    position: relative;
+    background-color: #9C58B6;
+    font-size: 30px;
+}
+
+#block-Email .container {
+    width: 500px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+}
+
+#block-Email .container a {
+    color: white;
 }
 
 
@@ -363,9 +402,17 @@ li {
     margin: 0 7px;
     transition: all 1s ease-out 0.3s;
 }
-
+.current.section:first-child img{
+    opacity: 1;
+   
+    transition: all 1s ease-out 1.3s;
+}
 
 /*第三屏动画*/
+
+#block-skill ul {
+    transition: all 1s ease-out 0.3s;
+}
 
 
 /*第四屏动画*/
