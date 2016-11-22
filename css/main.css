@@ -9,15 +9,13 @@ h2 {
     font-family: 微软雅黑;
 }
 
-.section {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+img {
+    border: none;
 }
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 li {
@@ -53,25 +51,35 @@ li {
 }
 
 .header a:hover {
-    // color: #999;
     background-color: #222728;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+    height: 100%;
+    z-index: 0;
 }
 
 
 /*第一屏*/
 
 .section:first-child {
+    height: 1000px;
+    width: 100%;
     background-color: #16BA9D;
-    position: relative;
+    font-size: 100px;
+    color: white;
+    text-align: center;
 }
-.section:first-child img{
-    width: 40px;
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    opacity: 0;
-    margin-left: -20px
-}
+
 .section:first-child .text {
     width: 100%;
     text-align: center;
@@ -80,55 +88,76 @@ li {
     color: #FFF;
     position: absolute;
     top: 50%;
+    left: 0;
 }
 
-.section:first-child span {
+.section:first-child .text span {
     display: inline-block;
     margin: 0 40px;
     opacity: 0;
     background-image: url(../images/p1.png);
 }
 
-.section:first-child span:nth-child(1) {
+.section:first-child img {
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    opacity: 0;
+    margin-left: -20px
+}
+
+.section:first-child .text span:nth-child(1) {
     background-position: -15px -5px;
     width: 45px;
     height: 46px;
 }
 
-.section:first-child span:nth-child(2) {
+.section:first-child .text span:nth-child(2) {
     background-position: -61px -5px;
-    width: 21px;
+    width: 22px;
     height: 46px;
 }
 
-.section:first-child span:nth-child(3) {
+.section:first-child .text span:nth-child(3) {
     background-position: -87px -5px;
     width: 12px;
     height: 46px;
 }
 
-.section:first-child span:nth-child(4) {
+.section:first-child .text span:nth-child(4) {
     background-position: -100px -5px;
     width: 25px;
     height: 46px;
 }
 
-.section:first-child span:nth-child(5) {
+.section:first-child .text span:nth-child(5) {
     background-position: -124px -5px;
     width: 28px;
     height: 46px;
 }
 
-.section:first-child span:nth-child(6) {
+.section:first-child .text span:nth-child(6) {
     background-position: -154px -5px;
     width: 39px;
     height: 48px;
 }
 
-.section:first-child span:nth-child(7) {
+.section:first-child .text span:nth-child(7) {
     background-position: -195px -5px;
     width: 26px;
     height: 48px;
+}
+
+.current.section:first-child span {
+    opacity: 1;
+    margin: 0 7px;
+    transition: all 1s ease-out 0.3s;
+}
+
+.current.section:first-child img {
+    opacity: 1;
+    transition: all 1s ease-out 1.3s;
 }
 
 
@@ -149,7 +178,7 @@ li {
     text-align: center;
 }
 
-.intro-icon #myPhoto {
+.intro-icon img {
     width: 150px;
     vertical-align: middle;
     border-radius: 50%;
@@ -171,32 +200,26 @@ li {
 
 /*第三屏*/
 
-#block-skill {
-    height: auto;
-    width: 100%;
+.section:nth-child(3) {
     background-color: #9C58B6;
     color: #FFFFFF;
-    padding-bottom: 160px;
+    padding-top: 100px;
 }
 
-#block-skill .container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-#block-skill .skill-title {
+.section:nth-child(3) .skill-title {
     width: 300px;
     margin: 0 auto;
     padding-top: 10%;
     text-align: center;
+    font-size: 30px;
 }
 
-#block-skill .skills {
+.section:nth-child(3) .skills {
     display: flex;
     margin-top: 12%;
 }
 
-#block-skill ul {
+.section:nth-child(3) ul {
     flex: 1;
     border: 2px solid #FFFFFF;
     font-size: 20px;
@@ -208,94 +231,91 @@ li {
     overflow: hidden;
 }
 
-#block-skill li {
+.section:nth-child(3) li {
     height: 50px;
     line-height: 50px;
-  
 }
 
-#block-skill li:first-child {
+.section:nth-child(3) li:first-child {
     background-color: #FFFFFF;
     color: #333;
 }
 
-#block-skill li:hover {
+.section:nth-child(3) li:hover {
     background-color: #FFFFFF;
     color: #333;
     cursor: default;
-    transform:scale(1.2)
+    transform: scale(1.2)
 }
-
-
 
 
 /*第四屏*/
 
-#block-workEXP {
-    height: auto;
-    width: 100%;
+.section:nth-child(4) {
     background-color: #0da5d6;
     color: #e7e7e7;
-    padding: 160px 0
+    padding: 100px 0
 }
 
-#block-workEXP .work-title {
+.section:nth-child(4) .work-title {
     width: 300px;
     margin: 0 auto;
     text-align: center;
+    font-size: 30px;
+    padding-top: 10%;
 }
 
-#block-workEXP .workEXP-main {
+.section:nth-child(4) .workEXP-main {
     height: auto;
     width: 980px;
     margin: 10% auto;
 }
 
-#block-workEXP .timebox {
+.section:nth-child(4) .timebox {
     margin-left: 55px;
     font-size: 29px;
 }
 
-#block-workEXP .timebox li {
+.section:nth-child(4) .timebox li {
     display: inline-block;
     margin-top: 5px;
 }
 
-#block-workEXP .time1 {
+.section:nth-child(4) .time1 {
     margin-left: 115px
 }
 
-#block-workEXP .timeline {
+.section:nth-child(4) .timeline {
     height: 27px;
     width: 868px;
     margin-left: 42px;
     background: url(../images/timeline.png) no-repeat center;
 }
 
-#block-workEXP .workbox {
+.section:nth-child(4) .workbox {
     margin-left: 194px;
 }
 
-#block-workEXP .workbox li {
+.section:nth-child(4) .workbox li {
     display: inline-block;
     width: 310px;
     vertical-align: top;
 }
 
-#block-workEXP .workbox li label {
+.section:nth-child(4) .workbox li label {
     display: block;
 }
 
-#block-workEXP .workbox .work-place {
+.section:nth-child(4) .workbox .work-place {
     font-size: 26px;
     font-weight: bold
 }
 
-#block-workEXP .workbox .work-position {
+.section:nth-child(4) .workbox .work-position {
     font-size: 20px;
 }
 
-#block-workEXP .workbox .work-do {
+.section:nth-child(4) .workbox .work-do {
     margin-top: 10px;
     font-size: 16px;
 }
@@ -303,20 +323,22 @@ li {
 
 /*第五屏*/
 
-#block-prjEXP {
+.section:nth-child(5) {
     padding: 50px 0 200px;
     width: 100%;
     background-color: #129DE7;
     color: #FFFFFF;
 }
 
-#block-prjEXP .prjEXP-title {
+.section:nth-child(5) .prjEXP-title {
     width: 300px;
-    margin: 30px auto;
+    margin: 0 auto;
     text-align: center;
+    font-size: 30px;
+    padding-top: 10%;
 }
 
-#block-prjEXP .prjs {
+.section:nth-child(5) .prjs {
     height: auto;
     width: 980px;
     margin: 0 auto;
@@ -325,7 +347,7 @@ li {
     display: flex;
 }
 
-#block-prjEXP .prj {
+.section:nth-child(5) .prj {
     float: left;
     height: auto;
     margin: 0 auto;
@@ -333,7 +355,7 @@ li {
     flex: 1;
 }
 
-#block-prjEXP .prj .prj-logo {
+.section:nth-child(5) .prj .prj-logo {
     display: block;
     margin: 0 auto;
     height: 180px;
@@ -341,7 +363,7 @@ li {
     border-radius: 50%;
 }
 
-#block-prjEXP .prj .prj-title {
+.section:nth-child(5) .prj .prj-title {
     height: auto;
     width: 240px;
     margin: 20px auto;
@@ -349,39 +371,39 @@ li {
     text-align: center;
 }
 
-#block-prjEXP .prj .prj-intro {
+.section:nth-child(5) .prj .prj-intro {
     height: auto;
     width: 240px;
     font-size: 20px;
     margin: 0 auto;
 }
 
-#block-prjEXP #prj-helpmechoose .prj-logo {
+.section:nth-child(5) .qmm .prj-logo {
     background: #ED6461 no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
-#block-prjEXP #prj-navFixed .prj-title a:hover {
+.section:nth-child(5) .prj-title a:hover {
     border-bottom: 3px solid white;
 }
 
-#block-prjEXP #prj-navFixed .prj-logo {
+.section:nth-child(5) .pagejs .prj-logo {
     background: #9C58B6 no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
-#block-prjEXP #prj-integralSystem .prj-logo {
+.section:nth-child(5) .bocam .prj-logo {
     background: #16CC70 no-repeat center;
     border: 4px solid #FFFFFF;
 }
 
-#block-Email {
+.section:nth-child(6) {
     position: relative;
     background-color: #9C58B6;
     font-size: 30px;
 }
 
-#block-Email .container {
+.section:nth-child(6) .container {
     width: 500px;
     text-align: center;
     position: absolute;
@@ -390,35 +412,6 @@ li {
     top: 50%;
 }
 
-#block-Email .container a {
+.section:nth-child(6) .container a {
     color: white;
 }
-
-
-/*第一屏动画*/
-
-.current.section:first-child span {
-    opacity: 1;
-    margin: 0 7px;
-    transition: all 1s ease-out 0.3s;
-}
-.current.section:first-child img{
-    opacity: 1;
-   
-    transition: all 1s ease-out 1.3s;
-}
-
-/*第三屏动画*/
-
-#block-skill ul {
-    transition: all 1s ease-out 0.3s;
-}
-
-
-/*第四屏动画*/
-
-
-/*第五屏动画*/
-
-
-/*打字效果*/
