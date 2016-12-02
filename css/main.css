@@ -173,15 +173,56 @@ section {
     margin: 0 auto;
 }
 
-.intro-icon {
-    padding-top: 10%;
-    text-align: center;
-}
 
-.intro-icon img {
-    width: 150px;
-    vertical-align: middle;
-    border-radius: 50%;
+
+.intro-icon .turnplate_box{
+
+    width: 300px;
+    height: 300px;
+    margin: 100px auto ;
+    position: relative; 
+}
+.intro-icon .turnplate_box canvas{
+    position: absolute;
+}
+.intro-icon #myCanvas{
+    background-color: white;
+    border-radius: 100%;
+}
+.intro-icon #myCanvas01,#myCanvas03{
+    left: 50px;
+    top: 50px;
+    z-index: 30;
+}
+.intro-icon #myCanvas02{
+    left: 75px;
+    top: 75px;
+    z-index: 20;
+}
+.intro-icon #myCanvas{
+    -o-transform:  transform 6s;
+    -ms-transform:  transform 6s;
+    -moz-transform:  transform 6s;      
+    -webkit-transform:  transform 6s;
+    transition: transform 6s;
+    -o-transform-origin:  50% 50%;
+    -ms-transform-origin:  50% 50%;
+    -moz-transform-origin:  50% 50%;        
+    -webkit-transform-origin:  50% 50%;
+    transform-origin: 50% 50%;
+}
+.intro-icon .turnplatw_btn{
+    width: 60px;
+    height: 60px;
+    left: 120px;
+    top: 120px;
+    border-radius: 100%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    z-index: 40;
 }
 
 .intro-text {
