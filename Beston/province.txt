@@ -1,0 +1,85 @@
+[{
+    "provinceName": "安徽", 
+    "cities": [
+        {
+            "cityName": "合肥市"
+        }, 
+        {
+            "cityName": "蚌埠市"
+        }, 
+        {
+            "cityName": "淮南市"
+        }, 
+        {
+            "cityName": "淮北市"
+        }, 
+        {
+            "cityName": "马鞍山市"
+        }, 
+        {
+            "cityName": "安庆市"
+        }, 
+        {
+            "cityName": "六安市"
+        }, 
+        {
+            "cityName": "宣城市"
+        }, 
+        {
+            "cityName": "滁州市"
+        }, 
+        {
+            "cityName": "宿州市"
+        }, 
+        {
+            "cityName": "黄山市"
+        }, 
+        {
+            "cityName": "铜陵市"
+        }
+    ]
+},
+{
+    "provinceName": "湖北省",
+    "cities": [
+        {
+            "cityName": "鄂州市"
+        },
+        {
+            "cityName": "潜江市市"
+        },
+        {
+            "cityName": "武汉市"
+        },
+        {
+            "cityName": "襄樊市"
+        },
+        {
+            "cityName": "黄冈市"
+        },
+        {
+            "cityName": "咸宁市"
+        },
+        {
+            "cityName": "荆州市"
+        },
+        {
+            "cityName": "荆门市"
+        },
+        {
+            "cityName": "恩施市"
+        },
+        {
+            "cityName": "孝感市"
+        },
+        {
+            "cityName": "十堰市"
+        },
+        {
+            "cityName": "宜昌市"
+        }
+    ]
+}
+
+
+]
