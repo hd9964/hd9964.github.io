@@ -1,47 +1,4 @@
-window.onload = function() {
-        var obj;
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "province.php");
-        xhr.send(null);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                var data = xhr.responseText;
-                obj = JSON.parse(data);
-                for (var i = 0; i < obj.length; i++) {
-                    var provinceName = obj[i].provinceName;
-                    var option = document.createElement("option");
-                    option.innerHTML = provinceName;
-                    document.getElementById("province").appendChild(option);
-                }
-            }
-        }
 
-        document.getElementById("province").onchange = function() {
-
-            var provinceName = this.value;
-
-            for (var z = 0; z < obj.length; z++) {
-                if (obj[z].provinceName == provinceName) {
-
-                    document.getElementById("city").innerHTML = "<option>请选择城市</option>";
-                    var cities = obj[z].cities;
-                    for (var j = 0; j < cities.length; j++) {
-                        var cityName = cities[j].cityName;
-
-                        var option = document.createElement("option");
-
-                        option.innerHTML = cityName;
-
-                        document.getElementById("city").appendChild(option);
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
     $(function() {
         $(".tab_nav li").click(function() {
             $(this).addClass('current').siblings().removeClass("current")
