@@ -1,5 +1,5 @@
 [{
-    "provinceName": "安徽", 
+    "provinceName": "安徽省", 
     "cities": [
         {
             "cityName": "合肥市"

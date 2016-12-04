@@ -17,9 +17,7 @@
         $(".return").click(function() {
             $(document).scrollTop(0);
         });
-
-
-    })
+    });
 
     /**  
      * 简单的Tab组件  
