@@ -576,52 +576,49 @@
     <script type="text/javascript" src="./js/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="./js/demo.js"></script>
     <script> 
+	    window.onload = function() {
+	        var obj;
+	        var xhr = new XMLHttpRequest();
+	        xhr.open("GET", "province.php");
+	        xhr.send(null);
+	        xhr.onreadystatechange = function() {
+	            if (xhr.readyState == 4 && xhr.status == 200) {
+	                var data = xhr.responseText;
+	                obj = JSON.parse(data);
+	                for (var i = 0; i < obj.length; i++) {
+	                    var provinceName = obj[i].provinceName;
+	                    var option = document.createElement("option");
+	                    option.innerHTML = provinceName;
+	                    document.getElementById("province").appendChild(option);
+	                }
+	            }
+	        }
 
+	        document.getElementById("province").onchange = function() {
 
-    window.onload = function() {
-        var obj;
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "province.php");
-        xhr.send(null);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                var data = xhr.responseText;
-                obj = JSON.parse(data);
-                for (var i = 0; i < obj.length; i++) {
-                    var provinceName = obj[i].provinceName;
-                    var option = document.createElement("option");
-                    option.innerHTML = provinceName;
-                    document.getElementById("province").appendChild(option);
-                }
-            }
-        }
+	            var provinceName = this.value;
 
-        document.getElementById("province").onchange = function() {
+	            for (var z = 0; z < obj.length; z++) {
+	                if (obj[z].provinceName == provinceName) {
 
-            var provinceName = this.value;
+	                    document.getElementById("city").innerHTML = "<option>请选择城市</option>";
+	                    var cities = obj[z].cities;
+	                    for (var j = 0; j < cities.length; j++) {
+	                        var cityName = cities[j].cityName;
 
-            for (var z = 0; z < obj.length; z++) {
-                if (obj[z].provinceName == provinceName) {
+	                        var option = document.createElement("option");
 
-                    document.getElementById("city").innerHTML = "<option>请选择城市</option>";
-                    var cities = obj[z].cities;
-                    for (var j = 0; j < cities.length; j++) {
-                        var cityName = cities[j].cityName;
+	                        option.innerHTML = cityName;
 
-                        var option = document.createElement("option");
+	                        document.getElementById("city").appendChild(option);
+	                    }
 
-                        option.innerHTML = cityName;
+	                }
 
-                        document.getElementById("city").appendChild(option);
-                    }
+	            }
 
-                }
-
-            }
-
-        }
-
-    }   
+	        }
+	    }   
     </script>
 </body>
 
