@@ -165,21 +165,29 @@ section {
 
 .section:nth-child(2) {
     background-color: #0DA5D6;
-}
-
-.intro-icon,
-.intro-text {
-    width: 960px;
-    margin: 0 auto;
+    position: relative;
 }
 
 
+
+
+.intro-icon{
+    width: 300px;
+    height: 300px;
+
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,0)
+
+
+}
 
 .intro-icon .turnplate_box{
 
     width: 300px;
     height: 300px;
-    margin: 100px auto ;
+    
     position: relative; 
 }
 .intro-icon .turnplate_box canvas{
@@ -226,7 +234,9 @@ section {
 }
 
 .intro-text {
-    margin-top: 5%;
+    width: 960px;
+      margin: 550px auto 0;
+
 }
 
 .intro-text-l li {
@@ -420,8 +430,9 @@ section {
 }
 
 .section:nth-child(5) .qmm .prj-logo {
-    background: #ED6461 no-repeat center;
+    background: url(../images/qmm.fw.png) no-repeat center;
     border: 4px solid #FFFFFF;
+    background-color: #fff;
 }
 
 .section:nth-child(5) .prj-title a:hover {
@@ -434,8 +445,9 @@ section {
 }
 
 .section:nth-child(5) .bocam .prj-logo {
-    background: #16CC70 no-repeat center;
+    background: url(../images/best.fw.png)  no-repeat center;
     border: 4px solid #FFFFFF;
+     background-color: #fff;
 }
 
 .section:nth-child(6) {

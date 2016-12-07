@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画--rambler</title>
+	<style>
+		canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="400"></canvas>
+</body>
+<script>
+	function toAngle( radian ) {
+		return 180 * radian / Math.PI;
+	}
+	function toRadian( angle ) {
+		return Math.PI * angle / 180;
+	}
+	var canvas = document.getElementById('canvas'),
+		ctx = canvas.getContext('2d');
+
+	function Rambler(config) {
+		if(!config.context || !config.img || !config.frame){
+			console.warn('参数异常.');
+			return this;
+		}
+		this.context = config.context;
+		this.img = new Image();
+		this.img.src = config.img;
+		this.x = config.x || 0;
+		this.y = config.y || 0;
+		this.direction = config.direction || 0;
+		this.frame = config.frame;
+		this.currentFrame = config.currentFrame || 0;
+		this.speed = config.speed || 5;
+		this.width = 40;
+		this.height = 65;
+		this.fps = config.fps || 6.25;
+	}
+	Rambler.prototype = {
+		constructor: Rambler,
+		draw: function() {
+			var ctx = this.context;
+			// 1: 清除画布
+			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+			// 2: 绘制图像
+			ctx.drawImage(this.img, 
+					this.currentFrame * this.width, this.direction * this.height, this.width, this.height,
+					this.x, this.y, this.width, this.height);
+		},
+		update: function() {
+			var canvas = this.context.canvas;
+			var wait = 8;
+			this.currentFrame++;
+			this.currentFrame %= 4; 
+			switch(this.direction){
+				case 0:
+					// if( this.y + this.speed >= this.context.canvas.height ){
+					// 	this.y = -this.height - 8; 
+					// } else {
+					// 	this.y += this.speed;
+					// }
+					this.y += this.speed;
+					if( this.y >= canvas.height ){
+						this.y = -this.height - wait; 
+					}
+					break;
+				case 1: 
+					this.x -= this.speed;
+					if( this.x <= -this.width ){
+						this.x = canvas.width + wait;
+					}
+					break;
+				case 2:
+					this.x += this.speed;
+					if(this.x >= canvas.width ){
+						this.x = -this.width - wait;
+					}
+					break;
+				case 3:
+					this.y -= this.speed;
+					if(this.y <= -this.height){
+						this.y = canvas.height + wait;
+					}
+				 	break;
+			}
+		},
+		bind: function() {
+			var selt = this;
+			window.document.addEventListener('keydown', function(e) {
+				var keyCode = e.keyCode;
+				console.log(keyCode);
+				switch(keyCode){
+					case 38: // up
+					case 87:
+						selt.direction = 3;
+						break;
+					case 40: // down
+					case 83:
+						selt.direction = 0
+						break;
+					case 37: // left
+					case 65:
+						selt.direction = 1;
+						break;
+					case 39: // right
+					case 68:
+						selt.direction = 2;
+						break;
+				}
+			});
+		},
+		render: function() {
+			var self = this;
+			this.img.addEventListener('load', function() {
+				var render = function() {
+					self.bind();
+					self.draw();
+					self.update();					
+				};
+				window.setInterval(render, 1000 / self.fps);
+			});
+		}
+	};
+
+	var r = new Rambler({
+		context: ctx,					  // 绘图工具
+		img: './NPCrabbitbaby.png', // 源图片的路径
+		x: 0, 		  // 第一次小人在canvas中的渲染位置
+		y: 0,
+		direction: 0, // 0: down 1: left 2: right 3: up
+		frame: 4,
+		currentFrame: 0,
+		speed: 2,
+		fps: 6.25
+	});
+
+	r.render();
+	// 作业：扩展功能：
+	// 添加空格键事件的绑定；实现 点击空格键如果正在执行动画，就停止；否则就启动动画。
+</script>
+</html>

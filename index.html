@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <title>黄栋的简介</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -80,6 +81,9 @@
 					        document.body.onselectstart = function() {
 					            return false;
 					        };
+					        setTimeout(function(){
+					        	document.body.removeChild(alertFram);
+					        }, 3000)
 					    }
     				</script>
                     
@@ -195,9 +199,9 @@
                         <p class="prj-intro ">券妈妈优惠券网 - 中国最大的优惠券网站！</p>
                     </li>
                     <li class="prj pagejs" >
-                        <div class="prj-logo "></div>
-                        <h3 class="prj-title "><a href="http://alvarotrigo.com/fullPage/ " target="_blank ">fullPage 插件</a></h3>
-                        <p class="prj-intro ">jQuery全屏滚动插件。本站也使用了此插件。</p>
+                        <a class="prj-logo " href="./rambler/index.html"></a>
+                        <h3 class="prj-title "><a href="./rambler/index.html " target="_blank ">Canvas小游戏</a></h3>
+                        <p class="prj-intro ">使用Canvas画图做了一个小游戏</p>
                     </li>
                     <li class="prj bocam" >
                         <a href="./Beston/demo.html " class="prj-logo "></a>
